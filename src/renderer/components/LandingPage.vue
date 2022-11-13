@@ -1,14 +1,15 @@
 <template>
-  <div id="wrapper">
-    <main>
-      <div class="left-side">
+  <v-container>
+    <v-row justify="center">
+      <div>
         <span class="title">
-           Добро пожаловать в E-Vue!
+           Добро пожаловать в Finance!
         </span>
         <system-information></system-information>
       </div>
-    </main>
-  </div>
+    </v-row>
+  </v-container>
+
 </template>
 
 <script>

@@ -4,7 +4,7 @@
         dense
         elevation="4"
     >
-      <v-toolbar-title>E-Vue</v-toolbar-title>
+      <v-toolbar-title>Finance</v-toolbar-title>
       <v-spacer></v-spacer>
       <div class="navbar__container">
         <v-btn v-for="route in paths" @click="open(route.path)" outlined color="indigo">
@@ -17,6 +17,8 @@
 
 <script>
   import { routes } from '../../utils/const/routes'
+  import { mapActions, mapState } from 'vuex'
+
   export default {
     name: 'NavBar',
     data () {
@@ -24,7 +26,9 @@
         paths: routes
       }
     },
+    computed: mapState(['isAuth']),
     methods: {
+      ...mapActions(['loginApi']),
       open (link) {
         if (this.$router.history.current.path !== link) {
           this.$router.push(link)

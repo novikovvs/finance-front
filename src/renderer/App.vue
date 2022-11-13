@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-        <nav-bar></nav-bar>
-    <div class="app__router">
-      <router-view></router-view>
-    </div>
+    <v-app>
+      <nav-bar></nav-bar>
+      <div class="app__router">
+        <router-view></router-view>
+      </div>
+    </v-app>
   </div>
 </template>
 
@@ -21,8 +23,8 @@
 <style>
 html {
   height: 100%;
-  background: rgb(238,174,202);
-  background: linear-gradient(176deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: rgb(238, 174, 202);
+  background: linear-gradient(176deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
 .app__router {
